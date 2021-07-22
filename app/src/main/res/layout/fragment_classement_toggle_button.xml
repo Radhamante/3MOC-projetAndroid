@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:textColor="@color/black"
             app:backgroundTint="@color/white"/>
-*
+
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

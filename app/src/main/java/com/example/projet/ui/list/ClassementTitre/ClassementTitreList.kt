@@ -1,4 +1,4 @@
-package com.g123k.myapplication.ui.list
+package com.example.projet.ui.list.ClassementTitre
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projet.R
-import com.g123k.myapplication.Product
-import com.squareup.picasso.Callback
+import com.example.projet.model.ClassementTitre
+import com.example.projet.model.generateFakeTitre
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_bottom_navigation_classement.view.*
 import kotlinx.android.synthetic.main.titre_item_cell.view.*
-import kotlinx.android.synthetic.main.product_list_fragment.view.*
 
-class ProductsListFragment : Fragment() {
+class ClassementTitreList : Fragment() {
 
     // Equivalent du setContentView : qu'afficher à l'écran ?
     override fun onCreateView(
@@ -34,9 +34,9 @@ class ProductsListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Afficher les éléments les uns en dessous des autres
-        view.list.layoutManager = LinearLayoutManager(requireContext())
+        view.classementTitreList.layoutManager = LinearLayoutManager(requireContext())
         // Afficher un séparateur entre les éléments
-        view.list.addItemDecoration(
+        view.classementTitreList.addItemDecoration(
             DividerItemDecoration(
                 requireContext(),
                 DividerItemDecoration.VERTICAL
@@ -44,13 +44,13 @@ class ProductsListFragment : Fragment() {
         )
 
         // Donner les données à la liste
-        view.list.adapter = CalendarAdapter(
-            products = listOf(
-                generateFakeProduct(),
-                generateFakeProduct(),
-                generateFakeProduct(),
-                generateFakeProduct(),
-                generateFakeProduct(),
+        view.classementTitreList.adapter = CalendarAdapter(
+            titres = listOf(
+                generateFakeTitre(),
+                generateFakeTitre(),
+                generateFakeTitre(),
+                generateFakeTitre(),
+                generateFakeTitre(),
             )
         )
     }
@@ -58,8 +58,9 @@ class ProductsListFragment : Fragment() {
 }
 
 
-class CalendarAdapter(private val products: List<Product>) :
-    RecyclerView.Adapter<ProductViewHolder>() {
+class CalendarAdapter(private val titres: List<ClassementTitre>) :
+
+    RecyclerView.Adapter<TitreViewHolder>() {
 
     companion object {
 
@@ -70,20 +71,19 @@ class CalendarAdapter(private val products: List<Product>) :
     }
 
     override fun getItemCount(): Int {
-        return products.size
+        return titres.size
     }
 
     // Comment créer une cellule
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-        if (viewType == TYPE_TITLE) {
-            // return "Title" View Holder
-        } else if (viewType == TYPE_ALBUM) {
-            // return "Album" View Holder
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TitreViewHolder {
+//        if (viewType == TYPE_TITLE) {
+//            // return "Title" View Holder
+//        } else if (viewType == TYPE_ALBUM) {
+//            // return "Album" View Holder
+//        }
 
 
-
-        return ProductViewHolder(
+        return TitreViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.titre_item_cell, parent, false
             )
@@ -91,9 +91,9 @@ class CalendarAdapter(private val products: List<Product>) :
     }
 
     // Comment mettre à jour une cellule
-    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TitreViewHolder, position: Int) {
         holder.updateItem(
-            product = products[position]
+            oneTitre = titres[position]
         )
     }
 
@@ -110,22 +110,17 @@ class CalendarAdapter(private val products: List<Product>) :
 }
 
 // Une cellule
-class ProductViewHolder(v: View) : RecyclerView.ViewHolder(v) {
+class TitreViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
-//    val thumbnail: ImageView = v.
-//    val brand: TextView = v.product_cell_brand
-//    val name: TextView = v.product_cell_name
+    var titre: TextView = v.titreCellTitre
+    val artiste: TextView = v.titreCellArtiste
+    val image: ImageView = v.titreCellImage
 
-    fun updateItem(product: Product) {
-//        brand.text = product.brand
-//        name.text = product.name
-//
-//        Picasso.get().load(product.thumbnail).into(thumbnail, object : Callback {
-//            override fun onSuccess() {}
-//
-//            override fun onError(e: Exception?) {}
-//
-//        })
+    fun updateItem(oneTitre: ClassementTitre) {
+        titre.text = oneTitre.titre
+        artiste.text = oneTitre.artiste
+
+        Picasso.get().load(oneTitre.imageUrl).into(image)
     }
 
 }
