@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/tab_classement"
+        android:title="Classement"
+        android:icon="@drawable/accueil_classements" />
+
+
+    <item android:id="@+id/tab_recherche"
+        android:title="Recherche"
+        android:icon="@drawable/accueil_recherche" />
+
+
+    <item android:id="@+id/tab_favoris"
+        android:title="Favoris"
+        android:icon="@drawable/accueil_favoris" />
+
+</menu>

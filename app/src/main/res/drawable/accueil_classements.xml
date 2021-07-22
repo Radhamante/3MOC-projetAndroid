@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="19dp"
+    android:height="19dp"
+    android:viewportWidth="19"
+    android:viewportHeight="19">
+
+    <group
+            android:translateX="-53.000000"
+            android:translateY="-735.000000">
+        <group
+                android:translateY="725.000000">
+            <group
+                    android:translateX="25.000000">
+                <path
+                    android:fillColor="#1BB46B"
+                    android:fillType="evenOdd"
+                    android:strokeWidth="1"
+                    android:pathData="M44.1237458,10.875 L30.1237458,10.875 C29.0237458,10.875 28.1237458,11.775 28.1237458,12.875 L28.1237458,26.875 C28.1237458,27.975 29.0237458,28.875 30.1237458,28.875 L44.1237458,28.875 C45.2237458,28.875 46.1237458,27.975 46.1237458,26.875 L46.1237458,12.875 C46.1237458,11.775 45.2237458,10.875 44.1237458,10.875 L44.1237458,10.875 Z M34.1237458,24.875 L32.1237458,24.875 L32.1237458,17.875 L34.1237458,17.875 L34.1237458,24.875 L34.1237458,24.875 Z M38.1237458,24.875 L36.1237458,24.875 L36.1237458,14.875 L38.1237458,14.875 L38.1237458,24.875 L38.1237458,24.875 Z M42.1237458,24.875 L40.1237458,24.875 L40.1237458,20.875 L42.1237458,20.875 L42.1237458,24.875 L42.1237458,24.875 Z" />
+            </group>
+        </group>
+    </group>
+</vector>

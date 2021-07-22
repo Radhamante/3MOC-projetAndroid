@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/titreCellNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="1"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <ImageView
+        android:id="@+id/titreCellImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/accueil_favoris"
+        app:layout_constraintBottom_toBottomOf="@+id/titreCellNumber"
+        app:layout_constraintStart_toEndOf="@+id/titreCellNumber"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/titreCellTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="titre"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/titreCellArtiste"
+        app:layout_constraintStart_toEndOf="@+id/titreCellImage"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/titreCellArtiste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Artiste"
+        android:textColor="@color/main_green"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/titreCellNumber"
+        app:layout_constraintStart_toEndOf="@+id/titreCellImage"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
