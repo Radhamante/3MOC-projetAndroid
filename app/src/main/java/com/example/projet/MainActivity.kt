@@ -18,7 +18,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.projet.databinding.ActivityMainBinding
 import com.example.projet.ui.mainBottomNavigation.BottomNavigationFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_bottom_navigation.*
+import kotlinx.android.synthetic.main.fragment_bottom_navigation_classement.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,5 +36,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+
     }
 }

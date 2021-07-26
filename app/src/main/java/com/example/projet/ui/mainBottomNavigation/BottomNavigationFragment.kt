@@ -29,8 +29,6 @@ class BottomNavigationFragment : Fragment() {
         val navHost = childFragmentManager.findFragmentById(R.id.song_nav_host) as NavHostFragment
         NavigationUI.setupWithNavController(song_bottom_nav, navHost.navController)
 
-
-
     }
 
 }

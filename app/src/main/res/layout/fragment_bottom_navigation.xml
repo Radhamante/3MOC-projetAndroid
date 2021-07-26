@@ -19,6 +19,7 @@
         android:id="@+id/song_bottom_nav"
         android:layout_width="0dp"
         android:layout_height="?android:actionBarSize"
+        android:background="#f3f3f3"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

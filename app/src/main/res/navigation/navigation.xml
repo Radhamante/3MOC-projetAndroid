@@ -12,15 +12,15 @@
             app:destination="@id/artisteDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/tab_recherche"
-        android:name="com.example.projet.ui.mainBottomNavigation.BottomNavigationRechercheFragment"
-        android:label="SongRechercheFragment" />
+        android:id="@+id/artisteDetailFragment"
+        android:name="com.example.projet.ui.artisteDetail.ArtisteDetail"
+        android:label="ArtisteDetailFragment" />
     <fragment
         android:id="@+id/tab_favoris"
-        android:name="com.example.projet.ui.mainBottomNavigation.BottomNavigationFavorisFragment"
-        android:label="SongFavorisFragment" />
+        android:name="com.example.projet.ui.mainBottomNavigation.BottomNavigationFavorisFragement"
+        android:label="Favoris" />
     <fragment
-        android:id="@+id/artisteDetailFragment"
-        android:name="com.example.projet.ui.artisteDetail.ArtisteDetailFragment"
-        android:label="ArtisteDetailFragment" />
+        android:id="@+id/tab_recherche"
+        android:name="com.example.projet.ui.mainBottomNavigation.BottomNavigationRechercheFragment"
+        android:label="Rechercher" />
 </navigation>
